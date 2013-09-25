@@ -13,7 +13,7 @@ public class MainView extends Activity {
         setContentView(R.layout.activity_web_view);
         
        WebView view = (WebView) findViewById(R.id.webview);
-       view.loadUrl("https://www.dropbox.com/s/1tqjb6hc2fm70fh/index.html");
+       view.loadUrl("file:///android_asset/index.html");
         
     }
 
