@@ -54,7 +54,7 @@
 						</div>
 						<div data-role="fieldcontain" class="formfield">
 							<label for="allday">All Day?</label>
-							<select id="allday" name="allday" class="required">
+							<select id="allday" name="allday" class="required" onchange="enableDatePickers()">
 								<optgroup label="Is this an all-day event?">
 								<option value="Yes">Yes</option>
 								<option value="No" selected>No</option>
@@ -62,11 +62,11 @@
 						</div>
 						<div data-role="fieldcontain" class="formfield">
 							<label for="starttime">Start Date</label>
-							<input type="datetime" name="startdate" id="startdate" />
+							<input type="datetime" name="starttime" id="starttime" disabled />
 						</div>
 						<div data-role="fieldcontain" class="formfield">
 							<label for="endtime">End Date</label>
-							<input type="datetime" name="startdate" id="startdate" />
+							<input type="datetime" name="endtime" id="endtime" disabled />
 						</div>
 
 					<div class="ui-grid-a">
@@ -84,8 +84,7 @@
 
 			</div>
 		</div> <!-- Main Page-->
-
-<!--		<script src="js/homepage.js" type="text/javascript"></script>
-		<script src="js/json.js" type="text/javascript"></script> -->
+		
+		<script src="js/homepage.js" type="text/javascript"></script>
 	</body>
 </html>
