@@ -50,5 +50,10 @@ public class MainView extends Activity {
             Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
         }
         
+        @JavascriptInterface
+        public void makeLog(String log) {
+        	Log.i("LOG",log);
+        }
     }
+    
 }

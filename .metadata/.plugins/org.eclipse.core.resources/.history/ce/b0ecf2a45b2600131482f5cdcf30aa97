@@ -16,7 +16,7 @@ function testFunction(){
 
 function showAndroidToast(toast) {
         Native.showToast(toast);
-};
+    }
 
 function enableDatePickers(){
    if(elementName("allday").value == "No")

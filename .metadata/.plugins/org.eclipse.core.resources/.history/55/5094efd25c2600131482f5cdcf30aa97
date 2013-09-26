@@ -73,7 +73,7 @@
 						<center>
 							<input type="button" value="Submit" onClick="showAndroidToast('Hello Android!')" />
 							<br><br>
-							<input type="button" value="Reset" />
+							<input type="button" value="Reset" onClick="makeAndroidLog('Test Log')" />
 						</center>
 					</div>
 				</form>

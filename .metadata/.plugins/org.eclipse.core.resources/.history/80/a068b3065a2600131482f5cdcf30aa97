@@ -49,6 +49,6 @@ public class MainView extends Activity {
         public void showToast(String toast) {
             Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
         }
-        
     }
+    
 }

@@ -18,6 +18,10 @@ function showAndroidToast(toast) {
         Native.showToast(toast);
 };
 
+function makeAndroidLog(log) {
+		Native.makeLog(log);
+};
+
 function enableDatePickers(){
    if(elementName("allday").value == "No")
    {

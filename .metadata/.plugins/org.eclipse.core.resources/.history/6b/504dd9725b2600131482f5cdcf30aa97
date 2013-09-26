@@ -71,9 +71,9 @@
 
 					<div class="buttons">
 						<center>
-							<input type="button" value="Submit" onClick="showAndroidToast('Hello Android!')" />
+							<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
 							<br><br>
-							<input type="button" value="Reset" />
+							<input type="button" value="Reset" id="reset" />
 						</center>
 					</div>
 				</form>
