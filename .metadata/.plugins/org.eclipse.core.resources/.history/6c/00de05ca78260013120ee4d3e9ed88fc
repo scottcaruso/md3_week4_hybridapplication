@@ -56,6 +56,11 @@ public class MainView extends Activity {
         
         @JavascriptInterface
         public void handleReturnFromWebPage(String eventName, String eventLocation, String eventDescription, String allDay) {
+        	/*Log.i("INPUTS",eventName.toString()+eventLocation.toString()+eventDescription.toString()+allDay.toString());
+        	String titleString = (String) eventName;
+        	String locationString = (String) eventLocation;
+        	String descriptionString = (String) eventDescription;
+        	Boolean allDayBool = true;*/
         	Intent calendarIntent = new Intent(Intent.ACTION_EDIT);
         	calendarIntent.setType("vnd.android.cursor.item/event");
         	calendarIntent.putExtra("title", eventName);

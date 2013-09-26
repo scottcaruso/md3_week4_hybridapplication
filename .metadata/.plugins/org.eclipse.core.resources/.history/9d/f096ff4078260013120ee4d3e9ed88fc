@@ -72,6 +72,8 @@
 					<div class="buttons">
 						<center>
 							<input type="button" value="Submit" onClick="handleReturn()" />
+							<br><br>
+							<input type="button" value="Reset" onClick="showAndroidToast('Hello Android!')" />
 						</center>
 					</div>
 				</form>
