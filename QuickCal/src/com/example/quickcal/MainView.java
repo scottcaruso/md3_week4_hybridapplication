@@ -1,9 +1,13 @@
 package com.example.quickcal;
 
+import java.util.Calendar;
+
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.util.Log;
 import android.view.Menu;
 import android.webkit.JavascriptInterface;
@@ -48,6 +52,27 @@ public class MainView extends Activity {
         @JavascriptInterface
         public void showToast(String toast) {
             Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        }
+        
+        @JavascriptInterface
+        public void handleReturnFromWebPage(String eventName, String eventLocation, String eventDescription, String allDay) {
+        	/*Log.i("INPUTS",eventName.toString()+eventLocation.toString()+eventDescription.toString()+allDay.toString());
+        	String titleString = (String) eventName;
+        	String locationString = (String) eventLocation;
+        	String descriptionString = (String) eventDescription;
+        	Boolean allDayBool = true;*/
+        	Intent calendarIntent = new Intent(Intent.ACTION_EDIT);
+        	calendarIntent.setType("vnd.android.cursor.item/event");
+        	calendarIntent.putExtra("title", eventName);
+        	calendarIntent.putExtra("eventLocation",eventLocation);
+        	calendarIntent.putExtra("description",eventDescription);
+        	Boolean allDayBool = false;
+        	if (allDay.matches("Yes"))
+        	{
+        		allDayBool = true;
+        	}
+        	calendarIntent.putExtra("allDay", allDayBool);
+        	startActivity(calendarIntent);  	
         }
         
     }

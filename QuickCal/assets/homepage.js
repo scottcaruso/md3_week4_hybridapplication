@@ -15,7 +15,22 @@ function testFunction(){
 };
 
 function showAndroidToast(toast) {
-        Native.showToast(toast);
+    Native.showToast(toast);
+};
+
+function handleReturn() {
+	var validation = verifyAllFields();
+	if (validation == false)
+	{
+		Native.showToast("Please fill out all fields and try again!");
+	} else
+	{
+		var eventName = elementName("eventname").value;
+		var eventLocation = elementName("location").value;
+		var eventDetails = elementName("details").value;
+		var allDayEvent = elementName("allday").value;
+		Native.handleReturnFromWebPage(eventName,eventLocation,eventDetails,allDayEvent);
+	}
 };
 
 function enableDatePickers(){
@@ -28,6 +43,22 @@ function enableDatePickers(){
       elementName("starttime").disabled = true;
       elementName("endtime").disabled = true;
    }
+};
+
+function verifyAllFields(){
+	if(elementName("eventname").value == "")
+	{
+		return false;
+	} else if (elementName("location").value == "")
+	{
+		return false;
+	} else if (elementName("details").value == "")
+	{	
+		return false;
+	} else
+	{
+		return true;
+	}
 };
 
 //Make things happen when the links are clicked.
