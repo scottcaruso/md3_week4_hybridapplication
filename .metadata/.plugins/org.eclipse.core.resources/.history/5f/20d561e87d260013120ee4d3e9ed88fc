@@ -12,15 +12,14 @@
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/imageView1"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_alignLeft="@+id/webview"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/webview"
+        android:layout_alignParentRight="true"
         android:src="@drawable/quickcal" />
 
 </RelativeLayout>
