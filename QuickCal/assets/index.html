@@ -54,24 +54,27 @@
 						</div>
 						<div data-role="fieldcontain" class="formfield">
 							<label for="allday">All Day?</label>
-							<select id="allday" name="allday" class="required" onchange="enableDatePickers()">
+							<select id="allday" name="allday" class="required">
 								<optgroup label="Is this an all-day event?">
 								<option value="Yes">Yes</option>
 								<option value="No" selected>No</option>
 							</select>
 						</div>
-						<div data-role="fieldcontain" class="formfield">
+						<!-- <div data-role="fieldcontain" class="formfield">
 							<label for="starttime">Start Date</label>
 							<input type="datetime" name="starttime" id="starttime" disabled />
 						</div>
 						<div data-role="fieldcontain" class="formfield">
 							<label for="endtime">End Date</label>
 							<input type="datetime" name="endtime" id="endtime" disabled />
-						</div>
+						</div> -->
 
 					<div class="buttons">
-						<input type="submit" id="submit" value="Submit" />
-						<input type="reset" value="Reset" id="reset" />
+						<center>
+							<input type="button" id="submit" value="Submit" />
+							<br><br>
+							<input type="button" value="Reset" id="reset" />
+						</center>
 					</div>
 				</form>
 			</div>
